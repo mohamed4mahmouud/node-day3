@@ -20,6 +20,6 @@ export const addUser = async (req, res) => {
     res.cookie("sid", sid);
     res.render("welcome.ejs", { message: `Welcome ${userName}` });
   } else {
-    res.json({ message: "error" });
+    res.json("welcome.ejs", { message: "error" });
   }
 };
